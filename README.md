@@ -22,7 +22,7 @@ When logging, type your habits separated by spaces. For example: coding exercise
 
 ## Habits tracked
 
-Coding, exercise, and reading. You can change these by editing the HABITS list at the top of the file.
+It tracks all habits, if your habit is 2 words, use an underscore.
 
 ## Requirements
 
