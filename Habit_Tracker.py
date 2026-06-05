@@ -2,7 +2,6 @@ import json
 import os
 from datetime import date, timedelta
 
-HABITS = ["coding", "exercise", "reading"]
 FILE_PATH = "habits.json"
 
 
@@ -53,8 +52,12 @@ def main():
             save_data(FILE_PATH, data)
 
         elif command == "stats":
-            for habit in HABITS:
+            unique_habits = set()
+            for habit_list in data.values():
+                for habit in habit_list:
+                    unique_habits.add(habit)
+
+            for habit in unique_habits:
                 streak = get_streak(data, habit)
                 print(f"{habit}, streak: {streak}")
-
 main()
